@@ -1,47 +1,64 @@
 // import { Grid } from "@mui/material";
 import { Avatar, Button, Container, Grid, Typography } from "@mui/material";
-import { IntroContainer, AvatarContainer } from "./intro.component.styles";
+import {
+  IntroContainer,
+  AvatarContainer,
+  Name,
+  LinksContainer,
+  StyledLinkedinIcon,
+} from "./intro.component.styles";
 import MeImage from "../../../../assets/img/me.jpg";
-import { Description } from "../../../../shared/styles/elements.styles";
+import { Description, Hero } from "../../../../shared/styles/elements.styles";
+import { RevealAnimation } from "../../../../shared/animations/reveal.animation";
+import { MY_LINKEDIN_URL, MY_GITHUB_URL } from "../../../../config/constants";
+import GitHubIcon from "../../../../assets/icons/GitHub.Icon";
+import { unit } from "../../../../shared/units";
+import { RevealFromTopAnimation } from "../../../../shared/animations/reveal-top.animation";
+import { animation } from "../../../../shared/animation";
 
 const IntroComponent = () => {
   return (
     <>
       <IntroContainer>
-        <h1>Intro Component</h1>
         <Grid
           container
           justifyContent="center"
           columns={30}
-          // columnGap={"sm"}
           spacing={2}
           gap={3}
           gridTemplateColumns={"repeat(2, 1fr)"}
-          // borderColor={"red"}
-          // border={"1px solid red"}
         >
-          <Grid item xs={10}>
-            {/* <Container> */}
-              <Typography variant="h4">Hello, it's me</Typography>
-            {/* </Container> */}
-            <Container>
-              {/* <Typography variant="subtitle1"> */}
-              <Description>
-                An enthusiastic product designer currently shaping the future of
-                software development by designing smooth user-interfaces that
-                promote user interaction with information and data. While
-                traveling around the world.
-              </Description>
-            </Container>
+          <Grid item xs={10} margin={"auto 0"}>
+            <Typography variant="h5">Hello, it's me</Typography>
+            <Name>Henri</Name>
+            <Description>
+              I'm dedicated full stack developer with a passion for building Web
+              applications with a modern technologies. I thrive in a team
+              environment and enjoy working on a variety of projects. I am
+              always open for opportunities to learn and grow as a developer. If
+              I am not coding, you can find me either from the gym lifting
+              weights, somewhere with a camera on my hand or reading a
+              non-fiction when I commute to the office.
+            </Description>
+            <LinksContainer>
+              <a href={MY_LINKEDIN_URL} target="_blank">
+                <StyledLinkedinIcon />
+              </a>
+              <a href={MY_GITHUB_URL} target="_blank">
+                <GitHubIcon />
+              </a>
+            </LinksContainer>
           </Grid>
 
           <Grid item md={10}>
             <AvatarContainer>
-              <Avatar
-                alt="Henri"
-                src={MeImage}
-                sx={{ width: 400, height: 400 }}
-              />
+              <RevealAnimation duration={animation.d3}>
+                <Avatar
+                  alt="Henri"
+                  src={MeImage}
+                  sx={{ width: 400, height: 400 }}
+                />
+              </RevealAnimation>
             </AvatarContainer>
           </Grid>
         </Grid>

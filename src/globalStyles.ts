@@ -58,7 +58,6 @@ export const GlobalStyles = createGlobalStyle`
     border-right-color: transparent;
     transition: all 0.3s;
     overflow-x: visible;
-    /* margin-right: calc(${units.scrollBarMargin}); */
     &::-webkit-scrollbar-thumb {
       border-right-style: inset;
       /* sum viewport dimensions to guarantee border will fill scrollbar */
@@ -70,7 +69,6 @@ export const GlobalStyles = createGlobalStyle`
 
     }
     &::-webkit-scrollbar {
-      /* width: ${units.m1}; */
       background-color: rgba(0,0,0,0);
     }
     &::-webkit-scrollbar-track {

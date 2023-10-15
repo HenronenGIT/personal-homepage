@@ -1,66 +1,76 @@
 // import { Grid } from "@mui/material";
 import { Container, Grid, Typography } from "@mui/material";
-import { SkillsetContainer } from "./career.component.styles";
+import {
+  ComapnyTitle,
+  DateSpan,
+  SkillsetContainer,
+} from "./career.component.styles";
 import {
   BlueText,
   Description,
+  H3,
+  P,
+  SectionContainer,
+  SectionTitle,
+  Span,
 } from "../../../../shared/styles/elements.styles";
+import { color } from "../../../../shared/color";
+import SectionWrapper from "../../../../components/SectionWrapper/section.wrapper";
+import { unit } from "../../../../shared/units";
+import { RevealInView } from "../../../../shared/animations/reveal-in-view.animation";
+
+const careerElements = [
+  {
+    company: "Hive Helsinki",
+    position: "Student",
+    date: "Feb 2019",
+  },
+  {
+    company: "Slush",
+    position: "Full Stack Developer",
+    date: "Feb 2019",
+  },
+];
 
 const CareerComponent = () => {
+  const renderElements = () => {};
+
   return (
     <>
-      <h1>Skillset Component</h1>
-      <SkillsetContainer>
+      <RevealInView duration={2}>
+        <SectionTitle>Career</SectionTitle>
         <Grid
           container
           justifyContent="center"
           columns={30}
-          // columnGap={"sm"}
-          border={"1px solid red"}
-          borderColor={"red"}
           spacing={2}
           gap={3}
-          gridTemplateColumns={"repeat(2, 1fr)"}
+          gridTemplateColumns={"repeat(3, 1fr)"}
+          margin={"auto"}
         >
-          <Grid item xs={10} border={"1px solid red"} borderColor={"red"}>
-            <BlueText>MY SKILLSET</BlueText>
-            <Typography variant="h4">
-              Graphic Design, Interface Design & User Experience
-            </Typography>
-          </Grid>
-          <Grid item xs={14} border={"1px solid red"} borderColor={"red"}>
+          <Grid item>
+            {/* <CareerElement /> */}
             <Container>
-              {/* <Typography variant="subtitle2"></Typography> */}
-              <Description>
-                I specialize in building complex web applications, leading
-                front-end teams, digital product design and developing visual
-                design systems. I enjoy creating effortless user experience and
-                designing delightful digital products. The entire process of
-                going from a concept to release and gathering user’s feedback on
-                either client’s or my own products is what makes me wake up
-                everyday! I worked with numerous clients from all around the
-                world from early startups to well-established companies. I
-                always seek new opportunities for cooperation on projects around
-                interesting dashboards, design systems or landing pages. Let’s
-                create something awesome together!
-              </Description>
-              {/* <Typography variant="subtitle1">
-                I specialize in building complex web applications, leading
-                front-end teams, digital product design and developing visual
-                design systems. I enjoy creating effortless user experience and
-                designing delightful digital products. The entire process of
-                going from a concept to release and gathering user’s feedback on
-                either client’s or my own products is what makes me wake up
-                everyday! I worked with numerous clients from all around the
-                world from early startups to well-established companies. I
-                always seek new opportunities for cooperation on projects around
-                interesting dashboards, design systems or landing pages. Let’s
-                create something awesome together!
-              </Typography> */}
+              {/* <H3>Hive Helsinki</H3> */}
+              <ComapnyTitle>Hive Helsinki</ComapnyTitle>
+              <Description>Student</Description>
+              {/* Student */}
+            </Container>
+            <P>Feb 2019</P>
+          </Grid>
+          <Grid item>
+            <Container>
+              {/* <H3>Slush</H3> */}
+              <ComapnyTitle>Slush</ComapnyTitle>
+              <Description>Full Stack Developer</Description>
+              {/* //TODO make grayer */}
+              <P>Feb 2019</P>
+              {/* <DateSpan>Feb 2019</DateSpan> */}
             </Container>
           </Grid>
+          <Grid item></Grid>
         </Grid>
-      </SkillsetContainer>
+      </RevealInView>
     </>
   );
 };

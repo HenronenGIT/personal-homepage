@@ -1,10 +1,14 @@
 import { AppBar, Button, IconButton, Toolbar, Typography } from "@mui/material";
+import { NavBarContainer } from "./nav-bar.component.styles";
 
 const NavBarComponent = () => {
   return (
     <>
-      {/* <AppBar position="static"> */}
-      <AppBar position="static" color="transparent">
+      <AppBar
+        position="static"
+        color="transparent"
+        style={{ marginBottom: "100px" }}
+      >
         <Toolbar>
           <IconButton
             size="large"

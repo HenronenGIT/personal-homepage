@@ -4,56 +4,70 @@ import { SkillsetContainer } from "./skillset.component.styles";
 import {
   BlueText,
   Description,
+  H1,
+  H2,
+  Hero,
 } from "../../../../shared/styles/elements.styles";
+import { Reveal } from "../../../../shared/animations/reveal.animation";
+import { RevealInView } from "../../../../shared/animations/reveal-in-view.animation";
 
 const SkillsetComponent = () => {
   return (
     <>
-      <h1>Skillset Component</h1>
-      <SkillsetContainer>
-        <Grid
-          container
-          justifyContent="center"
-          columns={30}
-          // columnGap={"sm"}
-          spacing={2}
-          gap={3}
-          gridTemplateColumns={"repeat(2, 1fr)"}
-          // border={"1px solid red"}
-          // borderColor={"red"}
-        >
-          <Grid item xs={10}
-          // border={"1px solid red"} borderColor={"red"}
-          >
-            <BlueText>MY SKILLSET</BlueText>
-            <Typography variant="h4">
-              Graphic Design, Interface Design & User Experience
-            </Typography>
-          </Grid>
-          <Grid
-            item
-            xs={14}
-            // border={"1px solid red"} borderColor={"red"}
-          >
-            <Container>
-              {/* <Typography variant="subtitle2"></Typography> */}
-              <Description>
-                I specialize in building complex web applications, leading
-                front-end teams, digital product design and developing visual
-                design systems. I enjoy creating effortless user experience and
-                designing delightful digital products. The entire process of
-                going from a concept to release and gathering user’s feedback on
-                either client’s or my own products is what makes me wake up
-                everyday! I worked with numerous clients from all around the
-                world from early startups to well-established companies. I
-                always seek new opportunities for cooperation on projects around
-                interesting dashboards, design systems or landing pages. Let’s
-                create something awesome together!
-              </Description>
-            </Container>
-          </Grid>
-        </Grid>
-      </SkillsetContainer>
+      <RevealInView>
+        <Hero>
+          <SkillsetContainer>
+            <Grid
+              container
+              justifyContent="center"
+              columns={30}
+              // columnGap={"sm"}
+              spacing={2}
+              gap={3}
+              gridTemplateColumns={"repeat(2, 1fr)"}
+              margin={"auto"}
+              // border={"1px solid red"}
+              // borderColor={"red"}
+            >
+              <Grid item xs={10} margin={"auto 0 "}>
+                <BlueText>MY SKILLSET</BlueText>
+                {/* <Typography variant="h4"> */}
+                <H2>
+                  {/* Graphic Design, Interface Design & User Experience */}
+                  Full Stack Development, Database Management, and UI/UX Design
+                </H2>
+                {/* </Typography> */}
+              </Grid>
+              <Grid item xs={14}>
+                <Container>
+                  <Description>
+                    I have specialized in Full Stack Development, which have
+                    taught me the both the front-end, and back-end of web. With
+                    a wide range of projects under my belt, I have gained the
+                    needed experience to build any project from scratch.
+                    <br />
+                    <br />
+                    Past projects of my include: <br />
+                    <ul>
+                      <li>
+                        Internal Full Stack tools for the company I work for
+                      </li>
+                      <li>
+                        Backend SaaS payments service, which handles customers
+                        monthly payments
+                      </li>
+                      <li>
+                        Media Bank for a company, which allows users to upload
+                        Media Kits, and Press Releases for the public to view
+                      </li>
+                    </ul>
+                  </Description>
+                </Container>
+              </Grid>
+            </Grid>
+          </SkillsetContainer>
+        </Hero>
+      </RevealInView>
     </>
   );
 };

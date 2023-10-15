@@ -7,7 +7,8 @@ import { GlobalStyles } from "@mui/material";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <>
-    <GlobalStyles />
+    {/* <GlobalStyles styles={} /> */}
+    {/* <GlobalStyles /> */}
     <React.StrictMode>
       <BrowserRouter>
         <App />

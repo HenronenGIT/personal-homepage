@@ -4,11 +4,7 @@ import LinkedInIcon from "../../../../assets/icons/LinkedIn.Icon";
 import { unit } from "../../../../shared/units";
 
 export const IntroContainer = styled(Container)`
-  /* margin: 0 auto 0 auto; */
-  /* height: 2000px; */
-  /* height: 100%; */
-  width: 100%;
-  height: 100%;
+  margin: 0 auto 0 auto;
 `;
 
 export const AvatarContainer = styled(Container)`
