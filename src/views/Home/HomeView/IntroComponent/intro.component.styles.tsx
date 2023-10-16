@@ -1,14 +1,12 @@
-import { Avatar, Container } from "@mui/material";
+import { Avatar, Container, colors } from "@mui/material";
 import styled from "styled-components";
 import LinkedInIcon from "../../../../assets/icons/LinkedIn.Icon";
 import { unit } from "../../../../shared/units";
+import { color } from "../../../../shared/color";
 
 export const IntroContainer = styled(Container)`
-  /* margin: 0 auto 0 auto; */
-  /* height: 2000px; */
-  /* height: 100%; */
   width: 100%;
-  height: 100%;
+  height: 800px;
 `;
 
 export const AvatarContainer = styled(Container)`
@@ -16,6 +14,7 @@ export const AvatarContainer = styled(Container)`
 `;
 
 export const Name = styled.h1`
+  font-family: "Kaushan Script", cursive;
   padding: 0;
   margin: 0;
 `;
@@ -31,4 +30,10 @@ export const LinksContainer = styled.div`
 
 export const StyledLinkedinIcon = styled(LinkedInIcon)`
   cursor: pointer;
+`;
+
+export const Title = styled.h2`
+  padding: 0;
+  margin: 0;
+  color: ${color.blue300};
 `;

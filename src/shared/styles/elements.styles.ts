@@ -5,7 +5,7 @@ import { unit } from "../units";
 export const SectionContainer = styled.div``;
 
 export const BlueText = styled.h4`
-  color: #5f99ff;
+  color: ${color.blue300}
 `;
 
 export const Description = styled.p`
@@ -62,6 +62,9 @@ export const Hero = styled.div`
   position: relative;
   height: 500px;
   @media screen {
-    
   }
+`;
+
+export const Name = styled.h2`
+  font-family: "Kaushan Script", cursive;
 `;

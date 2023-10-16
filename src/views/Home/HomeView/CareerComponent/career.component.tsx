@@ -1,78 +1,77 @@
 // import { Grid } from "@mui/material";
-import { Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, TableRow, Typography } from '@mui/material';
 import {
-  ComapnyTitle,
-  DateSpan,
-  SkillsetContainer,
-} from "./career.component.styles";
-import {
-  BlueText,
-  Description,
-  H3,
-  P,
-  SectionContainer,
-  SectionTitle,
-  Span,
-} from "../../../../shared/styles/elements.styles";
-import { color } from "../../../../shared/color";
-import SectionWrapper from "../../../../components/SectionWrapper/section.wrapper";
-import { unit } from "../../../../shared/units";
-import { RevealInView } from "../../../../shared/animations/reveal-in-view.animation";
+	CareerContainer,
+	ComapnyTitle,
+	DateSpan,
+	SkillsetContainer,
+} from './career.component.styles';
+import { Description, P, SectionTitle } from '../../../../shared/styles/elements.styles';
+import { RevealInView } from '../../../../shared/animations/reveal-in-view.animation';
+import { BorderButton } from '../../../../components/BorderButton/Border.button';
+import LinkedInIcon from '../../../../assets/icons/LinkedIn.Icon';
+import { unit } from '../../../../shared/units';
 
 const careerElements = [
-  {
-    company: "Hive Helsinki",
-    position: "Student",
-    date: "Feb 2019",
-  },
-  {
-    company: "Slush",
-    position: "Full Stack Developer",
-    date: "Feb 2019",
-  },
+	{
+		company: 'Hive Helsinki',
+		title: 'Student',
+		date: 'Feb 2019',
+	},
+	{
+		company: 'Slush',
+		title: 'Full Stack Developer',
+		date: 'Feb 2019',
+	},
 ];
 
 const CareerComponent = () => {
-  const renderElements = () => {};
+	const renderElements = () => {
+		return careerElements.map((element, index) => {
+			return (
+				<Grid
+					item
+					key={index}
+					sx={{
+						display: 'flex',
+						flexDirection: 'column',
+						alignItems: 'left',
+						justifyContent: 'center',
+					}}
+				>
+					<ComapnyTitle>{element.company}</ComapnyTitle>
+					<Description>{element.title}</Description>
+					<DateSpan>{element.date}</DateSpan>
+				</Grid>
+			);
+		});
+	};
 
-  return (
-    <>
-      <RevealInView duration={2}>
-        <SectionTitle>Career</SectionTitle>
-        <Grid
-          container
-          justifyContent="center"
-          columns={30}
-          spacing={2}
-          gap={3}
-          gridTemplateColumns={"repeat(3, 1fr)"}
-          margin={"auto"}
-        >
-          <Grid item>
-            {/* <CareerElement /> */}
-            <Container>
-              {/* <H3>Hive Helsinki</H3> */}
-              <ComapnyTitle>Hive Helsinki</ComapnyTitle>
-              <Description>Student</Description>
-              {/* Student */}
-            </Container>
-            <P>Feb 2019</P>
-          </Grid>
-          <Grid item>
-            <Container>
-              {/* <H3>Slush</H3> */}
-              <ComapnyTitle>Slush</ComapnyTitle>
-              <Description>Full Stack Developer</Description>
-              {/* //TODO make grayer */}
-              <P>Feb 2019</P>
-              {/* <DateSpan>Feb 2019</DateSpan> */}
-            </Container>
-          </Grid>
-          <Grid item></Grid>
-        </Grid>
-      </RevealInView>
-    </>
-  );
+	return (
+		<>
+			{/* <RevealInView duration={2}> */}
+				{/* <CareerContainer> */}
+				{/* <span>test</span> */}
+				<Box display={'flex'} flexDirection={'row'}>
+					<SectionTitle>Career</SectionTitle>
+					{/* <Description>Career</Description> */}
+					<BorderButton icon={<LinkedInIcon />}>Career</BorderButton>
+				</Box>
+				<Grid
+					container
+					justifyContent='center'
+					columns={30}
+					spacing={2}
+					gap={3}
+					gridTemplateColumns={'repeat(2, 1fr)'}
+					margin={'auto'}
+				>
+					{renderElements()}
+				</Grid>
+				{/* </CareerContainer> */}
+			{/* </RevealInView> */}
+		</>
+	);
 };
 
 export default CareerComponent;
