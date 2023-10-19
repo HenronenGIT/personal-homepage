@@ -1,22 +1,19 @@
 // import { Grid } from "@mui/material";
-import { Avatar, Button, Container, Grid, Typography } from '@mui/material';
+import { Avatar, Grid, Typography } from '@mui/material';
+import GitHubIcon from '../../../../assets/icons/GitHub.Icon';
+import MeImage from '../../../../assets/img/me.jpg';
+import { MY_GITHUB_URL, MY_LINKEDIN_URL } from '../../../../config/constants';
+import { color } from '../../../../shared/color';
+
 import {
-	IntroContainer,
 	AvatarContainer,
-	Name,
+	IntroContainer,
 	LinksContainer,
+	Name,
 	StyledLinkedinIcon,
 	Title,
 } from './intro.component.styles';
-import MeImage from '../../../../assets/img/me.jpg';
-import { Description, Hero } from '../../../../shared/styles/elements.styles';
-import { RevealAnimation } from '../../../../shared/animations/reveal.animation';
-import { MY_LINKEDIN_URL, MY_GITHUB_URL } from '../../../../config/constants';
-import GitHubIcon from '../../../../assets/icons/GitHub.Icon';
-import { unit } from '../../../../shared/units';
-import { RevealFromTopAnimation } from '../../../../shared/animations/reveal-top.animation';
-import { animation } from '../../../../shared/animation';
-import { color } from '../../../../shared/color';
+import { Description } from '../../../../shared/styles/typography';
 
 // const descriptionText = `     I'm dedicated full stack developer with a passion for building Web
 // applications with a modern technologies. I thrive in a team

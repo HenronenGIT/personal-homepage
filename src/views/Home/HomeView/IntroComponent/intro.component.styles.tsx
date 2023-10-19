@@ -6,7 +6,7 @@ import { color } from "../../../../shared/color";
 
 export const IntroContainer = styled(Container)`
   width: 100%;
-  height: 800px;
+  height: 500px;
 `;
 
 export const AvatarContainer = styled(Container)`

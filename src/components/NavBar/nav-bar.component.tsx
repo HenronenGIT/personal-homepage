@@ -1,6 +1,5 @@
-import { AppBar, Button, IconButton, Toolbar, Typography } from '@mui/material';
-import { NavBarContainer } from './nav-bar.component.styles';
-import { Name } from '../../shared/styles/elements.styles';
+import { AppBar, Toolbar } from '@mui/material';
+import { Name } from '../../shared/styles/elements';
 
 const NavBarComponent = () => {
 	return (

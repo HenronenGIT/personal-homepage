@@ -16,7 +16,7 @@ const HomeView = () => {
 			{/* <QuoteComponent /> */}
 
 			<SkillsetComponent />
-			<CareerComponent />
+			{/* <CareerComponent /> */}
 			{/* <ContactComponent /> */}
 		</>
 	);

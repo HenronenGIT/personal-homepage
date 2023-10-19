@@ -1,7 +1,8 @@
 import { Container } from '@mui/material';
 import styled from 'styled-components';
-import { H3, Span } from '../../../../shared/styles/elements.styles';
 import { color } from '../../../../shared/color';
+import { H3, Span } from '../../../../shared/styles/typography';
+
 
 export const SkillsetContainer = styled(Container)`
 	margin: 0 auto 0 auto;
