@@ -4,6 +4,7 @@ import GitHubIcon from '../../../../assets/icons/GitHub.Icon';
 import MeImage from '../../../../assets/img/me.jpg';
 import { MY_GITHUB_URL, MY_LINKEDIN_URL } from '../../../../config/constants';
 import { color } from '../../../../shared/color';
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
 
 import {
 	AvatarContainer,
@@ -14,6 +15,9 @@ import {
 	Title,
 } from './intro.component.styles';
 import { Description } from '../../../../shared/styles/typography';
+import { BorderButton } from '../../../../components/BorderButton/Border.button';
+import { StyledLink } from '../../../../shared/styles/elements';
+import { unit } from '../../../../shared/units';
 
 // const descriptionText = `     I'm dedicated full stack developer with a passion for building Web
 // applications with a modern technologies. I thrive in a team
@@ -24,7 +28,7 @@ import { Description } from '../../../../shared/styles/typography';
 // non-fiction when I commute to the office.`;
 
 const descriptionText = `
-  Full stack developer with a passion for building Web applications with a modern technologies.
+  Full stack developer with a passion for building Web applications with modern technologies.
 
 `;
 
@@ -60,11 +64,25 @@ const IntroComponent = () => {
 					<Grid item xs={1}>
 						<AvatarContainer>
 							{/* <RevealAnimation duration={animation.d3}> */}
-								<Avatar alt='Henri' src={MeImage} sx={{ width: 400, height: 400 }} />
+							<Avatar alt='Henri' src={MeImage} sx={{ width: 400, height: 400 }} />
 							{/* </RevealAnimation> */}
 						</AvatarContainer>
 					</Grid>
 				</Grid>
+				{/* <Link
+					// activeClass='active'
+					// spy={true}
+					// offset={50}
+					// onSetActive={handleSetActive}
+					to='skillset'
+					smooth={true}
+					duration={1000}
+				>
+					MY SKILLSET
+				</Link> */}
+				<StyledLink to='skillset' smooth={true} duration={1000}>
+					Skillset
+				</StyledLink>
 			</IntroContainer>
 		</>
 	);

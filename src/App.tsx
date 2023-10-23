@@ -17,7 +17,7 @@ import NavBarComponent from "./components/NavBar/nav-bar.component";
 const App = () => {
   return (
     <>
-      {/* <NavBarComponent /> */}
+      <NavBarComponent />
 
       <Routes>
         <Route path="/" element={<HomeView />} />

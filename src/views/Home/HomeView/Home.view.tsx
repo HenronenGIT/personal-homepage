@@ -12,12 +12,15 @@ const HomeView = () => {
 	return (
 		<>
 			<IntroComponent />
+
 			<hr />
 			{/* <QuoteComponent /> */}
 
 			<SkillsetComponent />
-			{/* <CareerComponent /> */}
-			{/* <ContactComponent /> */}
+			<hr />
+			<CareerComponent />
+			<hr />
+			<ContactComponent />
 		</>
 	);
 };

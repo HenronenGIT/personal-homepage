@@ -5,6 +5,7 @@ import { color } from '../../../../shared/color';
 
 export const SkillsetContainer = styled(Container)`
 	margin: 0 auto 0 auto;
+	margin: 300px;
 `;
 
 export const SectionTitle = styled(H2)``;
