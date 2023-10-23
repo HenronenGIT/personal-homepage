@@ -45,9 +45,9 @@ const IntroComponent = () => {
 					gridTemplateColumns={'repeat(2, 1fr)'}
 				>
 					<Grid item xs={1} margin={'auto 0'}>
-						<Typography color={color.gray600} variant='h5'>
+						{/* <Typography color={color.gray600} variant='h5'>
 							Hello, it's me
-						</Typography>
+						</Typography> */}
 						<Name>Henri Maronen</Name>
 						<Title>Full Stack Developer</Title>
 						<Description>{descriptionText}</Description>
@@ -69,17 +69,7 @@ const IntroComponent = () => {
 						</AvatarContainer>
 					</Grid>
 				</Grid>
-				{/* <Link
-					// activeClass='active'
-					// spy={true}
-					// offset={50}
-					// onSetActive={handleSetActive}
-					to='skillset'
-					smooth={true}
-					duration={1000}
-				>
-					MY SKILLSET
-				</Link> */}
+
 				<StyledLink to='skillset' smooth={true} duration={1000}>
 					Skillset
 				</StyledLink>
